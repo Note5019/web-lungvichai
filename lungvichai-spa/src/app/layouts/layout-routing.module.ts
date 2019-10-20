@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ContentComponent,
     children: [
       {
-        path: "",
+        path: "home",
         component: HomeComponent
       }
     ]

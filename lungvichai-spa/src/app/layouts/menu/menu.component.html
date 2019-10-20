@@ -1,46 +1,54 @@
 <nav id="sidebar">
   <div class="sidebar-header">
-    <h3>Dacor Sidebar</h3>
+    <h3>Yah !</h3>
   </div>
 
   <ul class="list-unstyled components">
-    <p>Dummy Heading</p>
-    <li class="active">
-      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+    <!-- <p>Dummy Heading</p> -->
+    <li routerLinkActive="active">
+      <a routerLinkActive="active" routerLink="/home">Dashboard</a>
+    </li>
+    <li routerLinkActive="active">
+      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+      routerLinkActive="active">
+        <!-- <i class="fas fa-atlas"></i> -->
+        Master Data</a>
       <ul class="collapse list-unstyled" id="homeSubmenu">
         <li>
-          <a href="#">Home 1</a>
+          <a href="#">Products</a>
         </li>
         <li>
-          <a href="#">Home 2</a>
+          <a href="#">Categories</a>
         </li>
         <li>
-          <a href="#">Home 3</a>
+          <a href="#">Locations</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="#">About</a>
-    </li>
-    <li>
-      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+        <!-- <i class="fas fa-atlas"></i> -->
+        Transactions</a>
       <ul class="collapse list-unstyled" id="pageSubmenu">
         <li>
-          <a href="#">Page 1</a>
+          <a href="#">Stock in</a>
         </li>
         <li>
-          <a href="#">Page 2</a>
+          <a href="#">Stock out</a>
         </li>
         <li>
-          <a href="#">Page 3</a>
+          <a href="#">Adjust stock</a>
+        </li>
+        <li>
+          <a href="#">Order item</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="#">Portfolio</a>
+      <a href="#">Accounting</a>
     </li>
     <li>
-      <a href="#">Contact</a>
+      <a href="#">Logging</a>
     </li>
   </ul>
 
