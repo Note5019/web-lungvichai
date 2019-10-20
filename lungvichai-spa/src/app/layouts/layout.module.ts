@@ -1,3 +1,4 @@
+import { HomeComponent } from './../pages/home/home.component';
 import { MenuComponent } from "./menu/menu.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HeaderComponent } from "./header/header.component";
@@ -12,7 +13,8 @@ import { LayoutRoutingModule } from "./layout-routing.module";
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    ContentComponent
+    ContentComponent,
+    HomeComponent
   ],
   imports: [CommonModule, LayoutRoutingModule]
 })
