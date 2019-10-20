@@ -1,15 +1,34 @@
-import { environment } from './../environments/environment';
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { environment } from "./../environments/environment";
+import { Component, OnInit, AfterViewInit } from "@angular/core";
+import { jsUtility } from "./jsUtility";
+import {
+  Router,
+  NavigationStart,
+  NavigationEnd,
+  NavigationCancel
+} from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
-export class AppComponent {
-  constructor(private http: HttpClient) {
-    this.http.get(`${environment.baseApiURL}/values`).subscribe(res=> console.log(res));
+export class AppComponent implements OnInit {
+  constructor(private _router: Router) {}
+  ngOnInit(): void {
+    this._router.events.subscribe(route => {
+      if (route instanceof NavigationStart) {
+        console.log("nav start");
+      }
+      if (route instanceof NavigationEnd) {
+        
+        console.log("nav end");
+        jsUtility.initialApp();
+      }
+      if (route instanceof NavigationCancel) {
+        console.log("nav end");
+      }
+    });
   }
-  title = 'lungvichai-spa';
+  title = "lungvichai-spa";
 }
