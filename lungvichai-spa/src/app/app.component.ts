@@ -16,6 +16,7 @@ import {
 export class AppComponent implements OnInit {
   constructor(private _router: Router) {}
   ngOnInit(): void {
+    // jsUtility.initialApp();
     this._router.events.subscribe(route => {
       if (route instanceof NavigationStart) {
         console.log("nav start");
@@ -23,7 +24,6 @@ export class AppComponent implements OnInit {
       if (route instanceof NavigationEnd) {
         
         console.log("nav end");
-        jsUtility.initialApp();
       }
       if (route instanceof NavigationCancel) {
         console.log("nav end");

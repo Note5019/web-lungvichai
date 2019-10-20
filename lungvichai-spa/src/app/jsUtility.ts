@@ -5,12 +5,15 @@ export class jsUtility {
   public static initialApp() {
     console.log("initialApp");
 
-    $(document).ready(function() {
-      $("#sidebarCollapse").on("click", function() {
-        console.log("sidebarCollapse click");
+    // $(document).ready(function() {
+    //   $("#sidebarCollapse").on("click", function() {
+    //     console.log("sidebarCollapse click");
 
-        $("#sidebar").toggleClass("active");
-      });
-    });
+    //     $("#sidebar").toggleClass("active");
+    //   });
+    // });
+  }
+  static toggleSideBar() {
+    $("#sidebar").toggleClass("active");
   }
 }
