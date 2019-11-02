@@ -1,4 +1,3 @@
-import { CategoryModule } from "./../modules/category/category.module";
 import { HomeComponent } from "./../pages/home/home.component";
 import { ContentComponent } from "./content/content.component";
 import { NgModule } from "@angular/core";
@@ -16,8 +15,8 @@ const routes: Routes = [
       {
         path: "ui",
         loadChildren: () =>
-          import("../pages/ui-components/ui-components.module").then(
-            m => m.UiComponentsModule
+          import("../modules/ui-component/ui-component.module").then(
+            m => m.UiComponentModule
           )
       },
       {

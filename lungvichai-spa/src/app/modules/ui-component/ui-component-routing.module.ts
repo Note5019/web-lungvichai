@@ -1,4 +1,4 @@
-import { UiShowComponent } from "./ui-show/ui-show.component";
+import { UiShowComponent } from './../../pages/ui-components/ui-show/ui-show.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
@@ -12,4 +12,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UiComponentsRoutingModule {}
+export class UiComponentRoutingModule {}
