@@ -14,6 +14,7 @@ export class jsUtility {
     // });
   }
   static toggleSideBar() {
-    $("#sidebar").toggleClass("active");
+    $("#sidebar").toggleClass("hide");
+    $("#layout-content").toggleClass("extend");
   }
 }

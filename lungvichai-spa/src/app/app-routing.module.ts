@@ -1,17 +1,20 @@
-import { HomeComponent } from './pages/home/home.component';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import { HomeComponent } from "./pages/home/home.component";
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: './layouts/layout.module#LayoutModule'
+    path: "",
+    loadChildren: "./layouts/layout.module#LayoutModule"
   }
+  // ,{
+  //   path: "**",
+  //   loadChildren: "./layouts/layout.module#LayoutModule"
+  // }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

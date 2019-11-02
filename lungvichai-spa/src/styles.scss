@@ -1,6 +1,10 @@
-@import "./style/variables.scss";
-@import "./style/sidebar.scss";
-@import "./style/animation.scss";
+@import "./assets/style/variables.scss";
+
+@import "./assets/style/layout.scss";
+@import "./assets/style/sidebar.scss";
+@import "./assets/style/animation.scss";
+@import "./assets/style/scrollbar.scss";
+@import "./assets/style/button.scss";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
@@ -75,37 +79,4 @@ a:focus {
   height: 1px;
   border-bottom: 1px dashed #ddd;
   margin: 40px 0;
-}
-.wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
-body {
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  font-size: 14px;
-  color: #333;
-  background: #eeecec;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ---------------------------------------------------
-    LAYOUT CONTENT STYLE
------------------------------------------------------ */
-
-#layout-content {
-  width: 100%;
-  padding: 20px;
-  min-height: 100vh;
-  transition: all 0.3s;
-}
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
-.page-content {
-  margin: 20px;
 }

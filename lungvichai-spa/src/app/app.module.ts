@@ -5,9 +5,10 @@ import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ProductComponent],
   imports: [
     BrowserModule,
 
