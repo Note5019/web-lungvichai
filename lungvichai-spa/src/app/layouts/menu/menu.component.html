@@ -6,15 +6,15 @@
     <ul class="list-unstyled components">
       <span *ngFor="let menu of menuItems">
         <li *ngIf="menu.subPath.length == 0" routerLinkActive="active">
-          <a routerLinkActive="active" routerLink="{{menu.path}}">
+          <a  [routerLink]="menu.path">
             <i class="{{menu.iconClass}}"></i>{{menu.title}}</a>
         </li>
-        <li *ngIf="menu.subPath.length != 0">
+        <li *ngIf="menu.subPath.length != 0" routerLinkActive="active">
           <a href="{{ '#' + menu.hrefId}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
             <i class="{{menu.iconClass}}"></i>{{menu.title}}</a>
           <ul class="collapse list-unstyled" id="{{menu.hrefId}}">
             <li *ngFor="let subMenu of menu.subPath" routerLinkActive="active">
-              <a routerLinkActive="active" routerLink="{{menu.path}}"><i
+              <a [routerLink]="subMenu.path"><i
                   class="{{subMenu.iconClass}}"></i>{{subMenu.title}}</a>
             </li>
           </ul>
